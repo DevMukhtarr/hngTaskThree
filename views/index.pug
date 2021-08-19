@@ -1,0 +1,86 @@
+doctype html
+title Resume
+meta(charset='UTF-8')
+meta(name='viewport' content='width=device-width, initial-scale=1')
+link(rel='stylesheet' href='https://www.w3schools.com/w3css/4/w3.css')
+link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Montserrat')
+link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+style.
+  body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+  .w3-row-padding img {margin-bottom: 12px}
+  /* Set the width of the sidebar to 120px */
+  .w3-sidebar {width: 120px;background: grey}
+  /* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+  #main {margin-left: 120px}
+  /* Remove margins from "page content" on small screens */
+  @media only screen and (max-width: 600px) {#main {margin-left: 0}}
+// Icon Bar (Sidebar - hidden on small screens)
+nav.w3-sidebar.w3-bar-block.w3-small.w3-hide-small.w3-center
+  // Avatar image in top left corner
+  img(src='views/avatar_for_resume.png' style='width:80%; border-radius:10px')
+  a.w3-bar-item.w3-button.w3-padding-large.w3-black(href='#')
+    i.fa.fa-home.w3-xxlarge
+    p HOME
+  a.w3-bar-item.w3-button.w3-padding-large.w3-hover-black(href='#about')
+    i.fa.fa-user.w3-xxlarge
+    p ABOUT
+  a.w3-bar-item.w3-button.w3-padding-large.w3-hover-black(href='#contact')
+    i.fa.fa-envelope.w3-xxlarge
+    p CONTACT
+// Navbar on small screens (Hidden on medium and large screens)
+#myNavbar.w3-top.w3-hide-large.w3-hide-medium
+  .w3-bar.w3-black.w3-opacity.w3-hover-opacity-off.w3-center.w3-small
+    a.w3-bar-item.w3-button(href='#' style='width:25% !important') HOME
+    a.w3-bar-item.w3-button(href='#about' style='width:25% !important') ABOUT
+    a.w3-bar-item.w3-button(href='#photos' style='width:25% !important') PHOTOS
+    a.w3-bar-item.w3-button(href='#contact' style='width:25% !important') CONTACT
+// Page Content
+#main.w3-padding-large
+  // Header/Home
+  header#home.w3-container.w3-padding-32.w3-center.w3-black
+    h1.w3-jumbo
+      span.w3-hide-small I&apos;m
+      |  Abdulfatai Mukhtar.
+    p Backend Engineer.
+    img.w3-image(src='views/hng internship.png' alt='boy' width='992' height='1108')
+  // About Section
+  #about.w3-content.w3-justify.w3-text-grey.w3-padding-64
+    h2.w3-text-light-grey About me
+    hr.w3-opacity(style='width:200px')
+    p
+      |  Hello, My name is Abdulfatai Mukhtar and i am a Backend Engineer from Nigeria. My focus has been on Frontend Code to create beautiful websites, I have worked with HTML, CSS, JavaScript,Java. since was to become a Fullstack developer, i decided to pick some backend Languages and add them to My stack, and now my main focus has been on backend since i started it.
+      |  I started programming in 2017 With python as my first programming language, this was a very beautiful moment knowing i could tell the computer what to do with lines of code, i'm very passionate about coding.
+      | I like strategic games, and also building cool stuffs with tech.
+    h3.w3-padding-16.w3-text-light-grey My Skills
+    p.w3-wide HTML
+    .w3-white
+      .w3-dark-grey(style='height:28px;width:95%')
+    p.w3-wide CSS
+    .w3-white
+      .w3-dark-grey(style='height:28px;width:85%')
+    p.w3-wide Javascript
+    .w3-white
+      .w3-dark-grey(style='height:28px;width:80%')
+    p.w3-wide Git and Github
+    .w3-white
+      .w3-dark-grey(style='height:28px;width:70%')
+    p.w3-wide Node.js
+    .w3-white
+      .w3-dark-grey(style='height:28px;width:85%')
+    // End Portfolio Section
+    br
+    #contact
+      p Let&apos;s get in touch. Send me a message:
+      form(action='/send_message' method='post')
+        p
+          input.w3-input.w3-padding-16(type='text' placeholder='Name' required='' name='name')
+        p
+          input.w3-input.w3-padding-16(type='text' placeholder='Email' required='' name='email')
+        p
+          input.w3-input.w3-padding-16(type='text' placeholder='Subject' required='' name='subject')
+        p
+          input.w3-input.w3-padding-16(type='text' placeholder='Message' required='' name='message')
+        p
+          button.w3-button.w3-light-grey.w3-padding-large(type='submit')
+            i.fa.fa-paper-plane
+            |  SEND MESSAGE
