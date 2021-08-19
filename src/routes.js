@@ -16,6 +16,7 @@
     app.post('/send_message', (req, res) =>{
             let name = req.body.name;
             let email = req.body.email;
+            let untilsent = "Message sent"
             let ourUser = new customer({
                 name: name,
                 email: email,
@@ -50,8 +51,7 @@
                     console.log('Email sents')
                 }
             })
-
-            res.send("email will be sent")
+            res.render(process.cwd() + '/views/index', {untilsent: untilsent})
         })
 
     
